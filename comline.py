@@ -14,9 +14,9 @@ class ComLine():
 							default="map.txt",
 							help="Specify a tab-delimited population map (sample -> population)"
 		)
-		parser.add_argument("-p", "--phylip",
-							dest='phy',
-							default="input.phy",
+		parser.add_argument("-v", "--vcf",
+							dest='vcf',
+							default="input.vcf",
 							help="Specify a phylip file for input."
 		)
 		parser.add_argument("-o", "--out",
@@ -30,7 +30,7 @@ class ComLine():
 		self.args = parser.parse_args()
 
 		self.exists( self.args.popmap )
-		self.exists( self.args.phy )
+		self.exists( self.args.vcf )
 
 		#print( self.args.popmap )
 		#print( self.args.phy )

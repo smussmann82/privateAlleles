@@ -13,3 +13,4 @@ class Popmap():
 		for line in content:
 			temp = line.split()
 			self.popmap[temp[0]] = temp[1]
+		print(self.popmap)
